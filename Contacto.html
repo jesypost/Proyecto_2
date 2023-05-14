@@ -9,42 +9,114 @@
 </head>
 
 
-<body>
+<body>   
     <div class="container">
         <div class="header">
             <header>
-    <h1>Fiesta a medida<h1>
+    <h1>Fiesta a medida</h1>
 </header>
         </div>
 
 
-        <div class="seleccion">
+    <div class="seleccion">
 
             <button class="button button1"><a href="index.html" id="enlace-sin-subrayado">Inicio</a></button>
             <button class="button button1"><a href="Servicios.html" id="enlace-sin-subrayado">Servicios</a></button>
             <button class="button button1"><a href="Contacto.html" id="enlace-sin-subrayado">Contacto</a></button>
-            <button class="button button1"><a href="Nosotros.html" id="enlace-sin-subrayado">Nosotros</a></a></button>
+            <button class="button button1"><a href="Nosotros.html" id="enlace-sin-subrayado">Nosotros</a></button>
         
-    </div>       
+   </div>
+  
+           
+    <div class="general">
+        
+        <form action="" class="formulario" id="formulario" >
 
-
-
+            <!--Grupo nombre-->
+            <div class="formulario__grupo" id="grupo__nombre">
+                <label for="nombre" class="formulario__label">Nombre</label>
+                   <div class="formulario__grupo-input">
+                    <input type="text" class="formuario__input" name="nombre" id="nombre" placeholder="Siouxsie">
+                    <i class="formulario__validacion-estado fa-regular fa-circle-xmark"></i>
+                    </div>
+                    <p class="formulario__input-error">Ingrese un nombre válido</p>
+                </div>
     
 
+                <!--Grupo apellido-->
+                <div class="formulario__grupo" id="grupo__apellido">
+                    <label for="apellido" class="formulario__label">Apellido</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formuario__input" name="apellido" id="apellido" placeholder="Banshee">
+                        <i class="formulario__validacion-estado fa-regular fa-circle-xmark"></i>
+                        </div>
+                        <p class="formulario__input-error">Ingrese un apellido válido</p>
+                    </div>
+    
+                     <!--Grupo correo-->
+                <div class="formulario__grupo" id="grupo__correo">
+                    <label for="correo" class="formulario__label">Correo electronico</label>
+                    <div class="formulario__grupo-input">
+                        <input type="email" class="formuario__input" name="correo" id="correo" placeholder="correo@correo.com">
+                        <i class="formulario__validacion-estado fa-regular fa-circle-xmark"></i>
+                        </div>
+                        <p class="formulario__input-error">Ingrese un correo electronico válido.</p>
+                    </div>    
+   
 
 
+                     <!--Grupo telefono-->
+                <div class="formulario__grupo" id="grupo__telefono">
+                    <label for="telefono" class="formulario__label">Teléfono</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formuario__input" name="telefono" id="telefono" placeholder="11305289">
+                        <i class="formulario__validacion-estado fa-regular fa-circle-xmark"></i>
+                        </div>
+                        <p class="formulario__input-error">Ingresar solo números, máximo 14 dígitos</p>
+                    </div>    
+             
+                    <!--Grupo salon-->
+                <div class="formulario__grupo" id="salon">
+                    <label for="salon" class="formulario__label">Salón</label>
+                    <div class="formulario__grupo-input">
+                        <select name= salon>
+                        <option value="Elegir">Elegir
+                        <option value="Salon1">Salón 1
+                        <option value="Salon2">Salón 2
+                        <option value="Salon3">Salón 3
+                    </select>
+                        <!--<input type="text" class="formulario__input" name="consulta" id="consulta">-->
+                        <i class="formulario__validacion-estado fa-regular fa-circle-xmark"></i>
+                        </div>
+                        <p class="formulario__input-error">Elija una opción</p>
+                    </div>    
+
+                <!--Grupo consulta-->
+                <div class="formulario__grupo" id="grupo__consulta">
+                    <label for="consulta" class="formulario__label">Tu consulta</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="consulta" id="consulta">
+                        <i class="formulario__validacion-estado fa-regular fa-circle-xmark"></i>
+                        </div>
+                        <p class="formulario__input-error">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, deleniti.</p>
+                    </div>    
+
+                <div class="formulario__mensaje" id="formulario__mensaje">
+                    <p><i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Por favor rellene el formulario correctamente</p>
+                    </div>
+                
+                 <div class="formulario__grupo formulario__grupo-btn-enviar" >
+                    <button type="submit" class="formulario__btn">Enviar formulario</button>
+                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente</p>
+                 </div>                                 
+    </form>
+    </div>
+</div>
+    <script src="js/formulario.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
 
-
-
-
-
-
-
-
-
-
-   <!--  <div class="general">
+    <!--  <div class="general">
         <p>Fiesta a medida</p>
     </div>
  
@@ -77,7 +149,7 @@
     </div> 
     <div class="i">
     <h1>Fiesta a medida</h1> -->
-</div>  
-</div>
+
+
 </body>
 </html>
