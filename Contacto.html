@@ -36,7 +36,7 @@
             <div class="formulario__grupo" id="grupo__nombre">
                 <label for="nombre" class="formulario__label">Nombre</label>
                    <div class="formulario__grupo-input">
-                    <input type="text" class="formuario__input" name="nombre" id="nombre" placeholder="Siouxsie">
+                    <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Siouxsie">
                     <i class="formulario__validacion-estado fa-regular fa-circle-xmark"></i>
                     </div>
                     <p class="formulario__input-error">Ingrese un nombre válido</p>
@@ -47,7 +47,7 @@
                 <div class="formulario__grupo" id="grupo__apellido">
                     <label for="apellido" class="formulario__label">Apellido</label>
                     <div class="formulario__grupo-input">
-                        <input type="text" class="formuario__input" name="apellido" id="apellido" placeholder="Banshee">
+                        <input type="text" class="formulario__input" name="apellido" id="apellido" placeholder="Banshee">
                         <i class="formulario__validacion-estado fa-regular fa-circle-xmark"></i>
                         </div>
                         <p class="formulario__input-error">Ingrese un apellido válido</p>
@@ -57,7 +57,7 @@
                 <div class="formulario__grupo" id="grupo__correo">
                     <label for="correo" class="formulario__label">Correo electronico</label>
                     <div class="formulario__grupo-input">
-                        <input type="email" class="formuario__input" name="correo" id="correo" placeholder="correo@correo.com">
+                        <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
                         <i class="formulario__validacion-estado fa-regular fa-circle-xmark"></i>
                         </div>
                         <p class="formulario__input-error">Ingrese un correo electronico válido.</p>
@@ -69,7 +69,7 @@
                 <div class="formulario__grupo" id="grupo__telefono">
                     <label for="telefono" class="formulario__label">Teléfono</label>
                     <div class="formulario__grupo-input">
-                        <input type="text" class="formuario__input" name="telefono" id="telefono" placeholder="11305289">
+                        <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="11305289">
                         <i class="formulario__validacion-estado fa-regular fa-circle-xmark"></i>
                         </div>
                         <p class="formulario__input-error">Ingresar solo números, máximo 14 dígitos</p>
@@ -150,6 +150,44 @@
     <div class="i">
     <h1>Fiesta a medida</h1> -->
 
-
+    <div class="fotos">
+    <br><hr>
+    <form name="fvalida">
+        <table>
+            <tr>
+                <td align="right">Nombre Completo: </td>
+                <td><input type="text" name="nombre" size="30" maxlength="100"></td>
+            </tr>
+            <tr>
+                <td align="right" >Teléfono: </td>
+                <td><input type="text" name="telefono" size="30" maxlength="100"></td>
+            </tr>
+            <tr>
+                <td align="right">Salón:</td>
+                <td>
+                    <select name= salon>
+                        <option value="s0">Elige
+                        <option value="s1">Salón 1
+                        <option value="s2">Salón 2
+                        <option value="s3">Salón 3
+                    </select>
+                </td>
+            </tr>
+            <tr>
+               <td align="right">Texto: </td>
+               <td><textarea name="texto" cols="50" rows="6"></textarea>
+               </td>
+            </tr>
+            <tr>  
+                <td colspan="2" align="center">
+                    <!-- Al presionar el botón, se llama a la función de validacion -->
+                    <input type="submit" id="b1" value="Enviar" onclick="validarEnviar()">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <hr><br>
+    </div>
+    
 </body>
 </html>
