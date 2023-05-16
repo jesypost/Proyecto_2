@@ -20,9 +20,42 @@ h1, h2{
 }
 
 
+h3 {
+    border: 2px;
+    color: 	#6565bf;
+    padding: 5px;
+   
+   
+
+
+}
+
+
+h4 {
+    border: 2px;
+    color: 		#6565bf;
+    padding: 5px;
+   
+
+}
+
+
+.parrafo1 {
+    border: 2px;
+    
+    padding: 5px;
+}
+
+.logo {
+    border: 5px;
+    
+    padding: 5px;
+}
+
+
 .container{
     display:grid;
-    grid-template: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / auto auto auto auto auto;
+    grid-template: 150px 60px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / auto auto auto auto auto;
     grid-template-areas: "header header header header header"
                           "seleccion seleccion seleccion seleccion seleccion"
                           "general general general general general"
@@ -72,16 +105,17 @@ h1, h2{
 
 .button {
     border: none;
-    color: white;
+    color: gray;
     padding: 15px 32px;
     text-align: center;
     display: inline-block;
     font-size: 16px;
+    font-weight: bold;
     margin: 4px 2px;
     cursor: pointer;
   }
 
-  .button1 {background-color: #ddfffc;} /* Green */
+  .button1 {background-color: #ddfffc; } /* Green */
  
   #enlace-sin-subrayado {
     text-decoration: none;
