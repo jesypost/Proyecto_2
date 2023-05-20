@@ -1,10 +1,18 @@
 
 *{font-family: DM Sans,sans-serif;
+    box-sizing: border-box;
 
 }
 
+
+
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
+body{
+    background-color: 	#ffdef2;
+    padding: 0 1.5em;
+    
+}
 
 h1, h2{
     border: 2px;
@@ -16,7 +24,7 @@ h1, h2{
 
 .container0{ 
     display: grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:15% 1fr 15%;
 }
 
 
@@ -42,35 +50,48 @@ h4 {
 
 .parrafo1 {
     border: 2px;
-    
+    color:gray;
     padding: 5px;
 }
 
+
+
+.parrafo2 {
+    border: 2px;
+    
+    padding: 20px;
+}
+
+
 .logo {
     border: 5px;
-    
+    vertical-align: middle;
     padding: 5px;
 }
 
 
 .container{
     display:grid;
-    grid-template: 150px 60px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / auto auto auto auto auto;
-    grid-template-areas: "header header header header header"
-                          "seleccion seleccion seleccion seleccion seleccion"
-                          "general general general general general"
-                          "fotos fotos fotos fotos fotos"
-                          "a a a a a"
-                          "b b b b b"
-                          "c c c c c"
-                          "d d d d d"
-                          "e e e e e"
-                          "f f f f f"
-                          "g g g g g"
-                          "h h h h h"
-                          "i i i i i"
-                          "j j j j j";
-    gap:1px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+    grid-template: 150px 60px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / auto auto ;
+    grid-template-areas: "header header "
+                          "seleccion seleccion "
+                          "general general "
+                          "fotos fotos "
+                          "a a "
+                          "b b "
+                          "c c "
+                          "d d "
+                          "e e "
+                          "f f "
+                          "g g "
+                          "h h "
+                          "i i "
+                          "pie pie ";
+    gap:0px;
  }
 
 .container2 {
@@ -84,7 +105,6 @@ h4 {
 .header         { grid-area: header; background-color: 	#ffdef2;}
 .seleccion        {grid-area: seleccion; background-color:	#f2e2ff;}  
 .general        {grid-area: general; background-color: #e2eeff;} 
-  
 .fotos        {grid-area: fotos; background-color:#ddfffc;}  
 .a        {grid-area: a; background-color: #ffffe3;}  
 .b        {grid-area: b; background-color: lightcyan;}  
@@ -95,14 +115,31 @@ h4 {
 .g        {grid-area: g; background-color: lightcyan;}  
 .h        {grid-area: h; background-color: lightcyan;}  
 .i        {grid-area: i; background-color: lightcyan;}  
-.j        {grid-area: j; background-color: lightcyan;}  
+.pie        {grid-area: pie; background-color: black;}  
 
 .item {
-    padding: 1px;
-    color: #ddfffc;
-    border-radius: 1px;
+    
+    grid-column-start: 2;        /* Comienza en la columna 2 */
+    grid-column-end: 2;   
+    text-align: justify;      
+
 }
 
+.item1 {
+  
+    grid-column-start: 1;        /* Comienza en la linea 1 */
+    grid-column-end: 2;          /* Finaliza en la linea 4 */
+    text-align: justify;
+    padding-left: 5px;
+}
+
+
+.item2 {
+  
+    grid-column-start: 2;        /* Comienza en la linea 1 */
+    grid-column-end: 2;          /* Finaliza en la linea 4 */
+
+}
 .button {
     border: none;
     color: gray;
@@ -135,7 +172,7 @@ h4 {
     overflow: hidden;
   }
   
-  .carrousel .grande {
+  .grande {
     width: 200%;
     display: flex;
     flex-flow: row nowrap;
@@ -161,7 +198,7 @@ h4 {
     box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
   }
   
-  .carrousel .puntos {
+  .puntos {
     width: 100%;
     margin: 1em 0 0;
     padding: 0.4em;
@@ -171,7 +208,7 @@ h4 {
     align-items: center;
   }
   
-  .carrousel .punto {
+  .puntos li {
     width: 2em;
     height: 2em;
     margin: 1em 1em 0;
@@ -185,3 +222,227 @@ h4 {
   .carrousel .punto.activo {
     background-color: lightblue;
   }
+
+
+.contacto-form form{
+
+margin:0;
+padding: 1em;
+
+}
+
+
+.contacto-total{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.contacto-form{
+    box-shadow: 0 0 20px 0 rgba(175,208,255,.8);
+    
+
+}
+
+
+.contacto-mapa iframe{
+    margin:0;
+padding: 1em;
+
+}
+
+.mapa{
+ width: 100%;
+
+
+}
+
+
+.contacto-mapa{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+
+}
+
+.general form textarea{
+
+width: 100%;
+padding: .7em;
+outline: none;
+box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+background: #fff;
+border: 3px solid transparent;
+border-radius: 3px;
+transition: .3s ease all;
+
+}
+
+
+
+
+.itemarea {
+    background-color: white;   /* Color de fondo del hijo  */
+    /*El area comienza en fila=3 columna=2 y ocupa 3 filas, 2 columnas */
+    grid-area: 3 / 2 / span 3 / span 2;
+}
+
+
+
+.formulario__label {
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.formulario__grupo-input {
+    position: relative;
+}
+
+.formulario__input {
+    width: 100%;
+    background: #fff;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 30px;
+    line-height: 45px;
+    padding: 0 20px 0 5px;
+    transition: .3s ease all;
+}
+
+
+
+
+.general form textarea:focus {
+    border: 3px solid #0075FF;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+
+.formulario__input:focus {
+    border: 3px solid #0075FF;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+
+
+.formulario__input-error {
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.formulario__input-error-activo {
+    display: block;
+}
+
+.formulario__validacion-estado {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.formulario__checkbox {
+    margin-right: 10px;
+}
+
+.formulario__grupo-terminos, 
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+    grid-column: span 1;
+    align-content: center;
+}
+
+.formulario__mensaje {
+    height: 45px;
+    line-height: 45px;
+    background: #F66060;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+}
+
+.formulario__mensaje-activo {
+    display: block;
+}
+
+.formulario__mensaje p {
+    margin: 0;
+}
+
+.formulario__grupo-btn-enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario__btn {
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1s ease all;
+}
+
+.formulario__btn:hover {
+    box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+
+.formulario__mensaje-exito {
+    font-size: 14px;
+    color: #119200;
+    display: none;
+}
+
+.formulario__mensaje-exito-activo {
+    display: block;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+    color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+    color: #bb2929;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+    border: 3px solid #bb2929;
+}
+
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario__grupo-terminos, 
+    .formulario__mensaje,
+    .formulario__grupo-btn-enviar {
+        grid-column: 1;
+    }
+
+    .formulario__btn {
+        width: 100%;
+    }
+}
+
+
