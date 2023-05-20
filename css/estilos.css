@@ -72,6 +72,7 @@ h4 {
 
 .container{
     display:grid;
+
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -90,8 +91,10 @@ h4 {
                           "g g "
                           "h h "
                           "i i "
+
                           "pie pie ";
     gap:0px;
+
  }
 
 .container2 {
@@ -103,7 +106,7 @@ h4 {
 }
 
 .header         { grid-area: header; background-color: 	#ffdef2;}
-.seleccion        {grid-area: seleccion; background-color:	#f2e2ff;}  
+.seleccion      {grid-area: seleccion; background-color:#f2e2ff;}  
 .general        {grid-area: general; background-color: #e2eeff;} 
 .fotos        {grid-area: fotos; background-color:#ddfffc;}  
 .a        {grid-area: a; background-color: #ffffe3;}  
@@ -160,7 +163,7 @@ h4 {
 
 
 
-.carrousel {
+/*.carrousel {
     width: 90%;
     max-width: 120em;
     padding: 2em;
@@ -183,7 +186,7 @@ h4 {
     border-radius: 1em;
     background-color: var(--blanco);
     box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-    padding: 2em;
+    padding: 1em;
     transition: all 0.5s ease;
     transform: translateX(0%);
   }
@@ -221,7 +224,47 @@ h4 {
   
   .carrousel .punto.activo {
     background-color: lightblue;
+  }*/
+  /*carrusel 3*/
+ /* * {box-sizing: border-box}
+  body {font-family: Verdana, sans-serif; margin:0}*/
+  
+  .mySlides {display: none
+}
+
+  div img {vertical-align: middle;
+    }
+  
+  /* contenedor */
+  .slideshow-container {
+    max-width: 800px;
+   position: relative;
+    margin: auto;
+    
+      }
+  
+  /* botones */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
   }
+  
+  /* posicion boton siguiente */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
 
 
 .contacto-form form{
@@ -444,5 +487,51 @@ transition: .3s ease all;
         width: 100%;
     }
 }
+
+
+  
+  /* al pasar mouse fondo negro */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* puntos imagenes */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* animacion */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+   /*animacion*/
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
 
 
