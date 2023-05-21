@@ -33,10 +33,7 @@ h3 {
     color: 	#6565bf;
     padding: 5px;
    
-   
-
-
-}
+   }
 
 
 h4 {
@@ -62,14 +59,6 @@ h4 {
     padding: 20px;
 }
 
-
-.logo {
-    border: 5px;
-    vertical-align: middle;
-    padding: 5px;
-}
-
-
 .container{
     display:grid;
 
@@ -77,11 +66,11 @@ h4 {
     margin-left: auto;
     margin-right: auto;
     padding: 1.5em;
-    grid-template: 150px 60px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / auto auto ;
+    grid-template: 150px 60px 1fr /*1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr*/ / auto auto ;
     grid-template-areas: "header header "
                           "seleccion seleccion "
                           "general general "
-                          "fotos fotos "
+                          /*"fotos fotos "
                           "a a "
                           "b b "
                           "c c "
@@ -90,8 +79,7 @@ h4 {
                           "f f "
                           "g g "
                           "h h "
-                          "i i "
-
+                          "i i "*/
                           "pie pie ";
     gap:0px;
 
@@ -118,7 +106,7 @@ h4 {
 .g        {grid-area: g; background-color: lightcyan;}  
 .h        {grid-area: h; background-color: lightcyan;}  
 .i        {grid-area: i; background-color: lightcyan;}  
-.pie        {grid-area: pie; background-color: black;}  
+.pie      {grid-area: pie; background-color: #ffffe3;}  
 
 .item {
     
@@ -160,113 +148,35 @@ h4 {
   #enlace-sin-subrayado {
     text-decoration: none;
 }
-
-
-
-/*.carrousel {
-    width: 90%;
-    max-width: 120em;
-    padding: 2em;
-    color: var(--negro);
-    transition: all 0.4s ease;
-    border-radius: 1em;
-    background-color: var(--blanco);
-    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-    overflow: hidden;
-  }
-  
-  .grande {
-    width: 200%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--negro);
-    transition: all 0.4s ease;
-    border-radius: 1em;
-    background-color: var(--blanco);
-    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-    padding: 1em;
-    transition: all 0.5s ease;
-    transform: translateX(0%);
-  }
-  
-  .carrousel .img {
-    width: calc( 100% / 2 - 2em);
-    min-height: 10vh;
-    color: var(--negro);
-    transition: all 0.4s ease;
-    border-radius: 1em;
-    background-color: var(--blanco);
-    box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-  }
-  
-  .puntos {
-    width: 100%;
-    margin: 1em 0 0;
-    padding: 0.4em;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .puntos li {
-    width: 2em;
-    height: 2em;
-    margin: 1em 1em 0;
-    color: var(--negro);
-    transition: all 0.4s ease;
-    border-radius: 1em;
-    background-color: var(--blanco);
-    box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-  }
-  
-  .carrousel .punto.activo {
-    background-color: lightblue;
-  }*/
-  /*carrusel 3*/
- /* * {box-sizing: border-box}
-  body {font-family: Verdana, sans-serif; margin:0}*/
-  
-  .mySlides {display: none
+/*grid inicio.html*/
+.grid-container {
+    display: grid;                        
+    grid-template-columns: 1fr 1fr 1fr ;   
+    gap: 10px;                               
+    background-color: #ddfffc;          
+    padding: 10px;                       
+    border: 2px solid gray;          
+    border-radius: 5px;
 }
 
-  div img {vertical-align: middle;
-    }
-  
-  /* contenedor */
-  .slideshow-container {
-    max-width: 800px;
-   position: relative;
-    margin: auto;
-    
-      }
-  
-  /* botones */
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  
-  /* posicion boton siguiente */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
+
+.grid-item {
+    background-color: lightgrey;  
+    color:black;               
+    padding:10px;
+    border: 2px solid violet;  
+    border-radius: 5px;
+    text-align: center;        
+}
+
+.item1 {
+    background-color:lightgrey;   /* Color de fondo del hijo */
+    grid-column-start: 1;        /* Comienza en la linea 1 */
+    grid-column-end: 4;          /* Finaliza en la linea 4 */
+}
 
 
-
+/*formulario*/
 .contacto-form form{
 
 margin:0;
