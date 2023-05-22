@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Contacto</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://kit.fontawesome.com/3aac399e68.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 
@@ -33,15 +37,16 @@
     <div class="general" >
         <div class="contacto-total">
             <div class="contacto-form">
-             <h3>Envianos tu consulta</h3>
+                <h3>Envianos tu consulta</h3>
             <form action="" id="formulario" >
-
+                
+                
   <!--Grupo nombre-->
-  <div class=" formulario__grupo" id="grupo__nombre">
+  <div class="formulario__grupo" id="grupo__nombre">
     <label for="nombre" class="formulario__label">¿Cúal es tu nombre?</label>
        <div class="formulario__grupo-input">
         <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="nombre">
-        <i class="formulario__validacion-estado fa-regular fa-circle-xmark"></i>
+        <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
         </div>
         <p class="formulario__input-error">Ingrese su nombre</p>
     </div>
@@ -51,7 +56,7 @@
             <label for="apellido" class="formulario__label">¿Cúal es tu apellido?</label>
             <div class="formulario__grupo-input">
                 <input type="text" class="formulario__input" name="apellido" id="apellido" placeholder="apellido">
-                <i class="formulario__validacion-estado fa-regular fa-circle-xmark"></i>
+                <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
                 </div>
                 <p class="formulario__input-error">Ingrese su apellido</p>
         </div>
@@ -62,20 +67,20 @@
             <label for="correo" class="formulario__label">Correo electronico</label>
             <div class="formulario__grupo-input">
                 <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
-                <i class="formulario__validacion-estado fa-regular fa-circle-xmark"></i>
+                <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
                 </div>
-                <p class="formulario__input-error">Ingrese un correo electronico válido.</p>
+                <p class="formulario__input-error">El correo sólo puede contener letras, números, puntos, guiones y guión bajo.</p>
         </div>    
 
           <!--Grupo telefono-->
           <div class="formulario__grupo" id="grupo__telefono">
             <label for="telefono" class="formulario__label">Teléfono</label>
             <div class="formulario__grupo-input">
-                <input type="tel" class="formulario__input" name="telefono" id="telefono" placeholder="Numero de linea"  required pattern="[0-9]{10}" title="Ingresá el número con código de área sin 0 ni 15." >
+                <input type="tel" class="formulario__input" name="telefono" id="telefono" placeholder="Numero de linea"  pattern="[0-9]{10}" title="Ingresá el número con código de área sin 0 ni 15." >
                 
-                <i class="formulario__validacion-estado fa-regular fa-circle-xmark"></i>
+                <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
                 </div>
-                <p class="formulario__input-error">Ingresar solo números, máximo 14 dígitos</p>
+                <p class="formulario__input-error">Ingresar sólo números, máximo 10 dígitos</p>
         </div>   
 
 
@@ -83,45 +88,51 @@
         <div class="formulario__grupo" id="salon">
             <label for="salon" class="formulario__label">Salón</label>
             <div class="formulario__grupo-input">
-                <select class="parrafo1" name= salon>
+                <select class="parrafo1" name= "salon">
                 <option class="parrafo1" value="Elegir">Elegir
                 <option class="parrafo1" value="Salon1">Salón 1
                 <option class="parrafo1" value="Salon2">Salón 2
                 <option class="parrafo1" value="Salon3">Salón 3
             </select>
                 <!--<input type="text" class="formulario__input" name="consulta" id="consulta">-->
-                <i class="formulario__validacion-estado fa-regular fa-circle-xmark"></i>
+                <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
                 </div>
                 <p class="formulario__input-error">Elija una opción</p>
         </div>    
-
+      
         
         <!--Grupo consulta-->
-        <div class="formulario__grupo" id="grupo__consulta">
+        <div class="formulario__grupo " id="grupo__consulta">
             <label for="consulta" class="formulario__label">Tu consulta</label>
             <div class="formulario__grupo-input">
             <textarea name="consulta" id="consulta"  rows="5" placeholder="mensaje"></textarea>
+            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
         </div>
+        <p class="formulario__input-error">Ingrese su consulta</p>
         </div>                      
-                <!-- <i class="formulario__validacion-estado fa-regular fa-circle-xmark"></i>
-                </div>
-                <p class="formulario__input-error">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, deleniti.</p>
-            </div> -->      
+       
+        <!-- Grupo: Terminos y Condiciones -->
+			<div class="formulario__grupo" id="grupo__terminos">
+				<label class="formulario__label">
+					<input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+					Acepto los Terminos y Condiciones
+				</label>
+			</div>
 
 
 
             <div class="formulario__mensaje" id="formulario__mensaje">
-                <p><i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Envie su mensaje</p>
+                <p><i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Por favor complete todos los campos</p>
                 </div>
-            
+               
              <div class="formulario__grupo formulario__grupo-btn-enviar" >
-                <button type="submit" class="formulario__btn">Enviar formulario</button>
-                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente</p>
+                <button type="submit" class="formulario__btn">Enviar</button>
+                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
              </div>                                 
 
-
+             
                 <script src="js/formulario.js"></script>
-                <script src="https://kit.fontawesome.com/c0e17904ad.js" crossorigin="anonymous"></script>
+              
 
 
             </form>
@@ -129,7 +140,13 @@
 
        <div class="contacto-mapa">
         <div class="contacto-info">
-
+                <h4>Más info</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Calle 123</li>
+                    <li><i class="fas fa-phone"></i> 1111111111</li>
+                    <li><i class="fas fa-envelope-open-text"></i> Fiestaamedida@correo.com</li>
+                </ul>
+                <p>Fiestaamedida.com</p>
         </div>
         <div class="mapa">
             <iframe src="https://www.google.com/maps/embed?pb=!1m27!1m12!1m3!1d105129.76704173036!2d-58.48714301074251!3d-34.57114279806292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m12!3e3!4m5!1s0x95bcb59f0e33d4eb%3A0xb4d7c2d0044d32e!2sParque%20Tres%20de%20Febrero%2C%20Av.%20Infanta%20Isabel%20110%2C%20Buenos%20Aires!3m2!1d-34.5708801!2d-58.417102899999996!4m4!1s0x95bcb59f0e33d4eb%3A0xb4d7c2d0044d32e!3m2!1d-34.5708801!2d-58.417102899999996!5e0!3m2!1ses-419!2sar!4v1684518933634!5m2!1ses-419!2sar" width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -139,6 +156,28 @@
  
         </div>
 
+    </div>
+    <div class="fotos"></div>
+    
+    <div class="pie">
+        <div class="item1"> <p>Seguinos en nuestras redes</p></div>
+       <div> <a href="https://www.instagram.com/">
+        <i class="fa-brands fa-instagram" style="color: #8a2a8d ;font-size: 18px"></i>
+        
+        </a></div>
+        <div> <a href="https://www.facebook.com/">
+            <i class="fa-brands fa-facebook-f"style="color: #4267b2 ;font-size: 18px;"></i>
+            </a></div>
+
+            <div> <a href="http://twitter.com/">
+                <i class="fa-brands fa-twitter" style="color: #1da1f2;font-size: 18px;"></i>
+                </a></div>
+       
+           
+            <!--<a href="https://www.linkedin.com/">
+            <i class="fa-brands fa-linkedin" style="font-size: 18px;"></i>
+            </a>-->
+           
     </div>
 </div>
 
