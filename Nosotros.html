@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c0e17904ad.js" crossorigin="anonymous"></script>
 </head>
 
 
@@ -16,7 +18,7 @@
     <div class="container">
         <div class="header">
             <header>
-                <img src="img/Imagen3.png" alt="logo" width="140px" class="logo">
+                <a href="index.html"><img src="img/Imagen3.png" alt="logo" width="140px" ></a>
 </header>
         </div>
 
@@ -47,11 +49,77 @@
         
         A lo largo de los años, hemos desarrollado una reputación por ofrecer excelencia en cada aspecto de nuestros servicios. Nos enorgullece ser parte de algunos de los eventos más importantes de la vida de nuestros clientes, y es un honor para nosotros ser parte de estas celebraciones. Estamos comprometidos a seguir superando las expectativas de nuestros clientes y a ofrecer un servicio excepcional en cada evento.   
 
-
-
-
+<div class="fotos">
+        <div class="container3">
+<h3>Estas personas nos recomiendan</h3>
+<h5>Hace click para conocerlas</h5>
+        <div id="app" class="container4">
+            <button v-on:click="traerDatosAPI"><a href="#tarjeta" id="enlace-sin-subrayado"> Ver</a></button>
+            <p>({{registros}} registros leidos)</p>
+            <!-- Aquí insertaremos contenido del archivo de texto1.txt -->
+            <div v-html="HTML_a_mostrar" class="container2"></div>
+        </div>
+    
+    
+        <!--CDN de Vue, version de desarrollo -->
+        <script src="https://unpkg.com/vue@next"></script>
+    
+        <!-- Nuestro script ------------------------------>
+        <script>
+            const {createApp} = Vue
+            const miAplicacion = createApp({
+                // DATOS de la aplicacion
+                data() {
+                    return { HTML_a_mostrar: "" ,
+                             registros: 0}
+                },
+    
+                methods: {
+                    
+                    traerDatosAPI() {
+                        fetch('https://randomuser.me/api') 
+                           
+                            .then(datos => datos.json()) 
+                            .then(datos => {
+                                
+                                this.HTML_a_mostrar +=
+                                    `<div class="tarjeta" id="tarjeta" >
+                             <img src = "${datos.results[0].picture.large}"</img><br>
+                             Nombre: ${datos.results[0].name.last}, ${datos.results[0].name.first}<br>
+                             ${datos.results[0].email} </div>`
+                             this.registros++
+                            })
+                    }
+                }
+    
+            })
+            miAplicacion.mount("#app")
+    
+        </script>
+</div>
 </div>
 
+</div>
+<div class="pie">
+    <div class="item3"> <p>Seguinos en nuestras redes</p></div>
+   <div> <a href="https://www.instagram.com/">
+    <i class="fa-brands fa-square-instagram" style="color: #8a2a8d ;font-size: 25px"></i>
+    
+    </a></div>
+    <div> <a href="https://www.facebook.com/">
+        <i class="fa-brands fa-facebook"style="color: #4267b2 ;font-size: 25px;"></i>
+        </a></div>
+
+        <div> <a href="http://twitter.com/">
+            <i class="fa-brands fa-twitter" style="color: #1da1f2;font-size: 25px;"></i>
+            </a></div>
+   
+       
+        <!--<a href="https://www.linkedin.com/">
+        <i class="fa-brands fa-linkedin" style="font-size: 18px;"></i>
+        </a>-->
+       
+</div>
  
 </div>
 </body>
