@@ -35,12 +35,14 @@ body{
     padding: 1.5em;
 
     grid-template: 150px 60px 1fr 1fr 100px  / auto auto ;
+
     grid-template-areas: "header header"
                          "seleccion seleccion"
                          "general general"
                          "fotos fotos"
                          "pie pie";
     gap: 0px;
+
 }
 
 .header         {grid-area: header; background-color: #ffdef2;}
@@ -83,7 +85,7 @@ body{
 
 .button {
     border: none;
-    color: gray;
+    color: #9a32cd;
     padding: 15px 32px;
     text-align: center;
     display: inline-block;
@@ -100,29 +102,78 @@ body{
 }
 /*grid inicio.html*/
 
+
+
+
+.animate__bounceIn {
+    color: #645197
+}
+
+
+
+
+
+
 .grid-container {
     display: grid;                        
     grid-template-columns: 1fr 1fr 1fr ;   
-    gap: 10px;                               
-    background-color: #ddfffc;          
-    padding: 10px;                       
-    border: 2px solid gray;          
+    gap: 10px;                                 
+    padding: 10px;                               
     border-radius: 5px;
+    
+   
 }
 
 
 .grid-item {
-    background-color: lightgrey;  
+ 
     color:black;               
-    padding:10px;
-    border: 2px solid violet;  
+    padding:10px; 
     border-radius: 5px;
-    text-align: center;        
+    text-align: center;     
+    transition: background-color 2s ease;   
 }
 
 
+
+
+.item1 {
+   
+    grid-column-start: 1;        /* Comienza en la linea 1 */
+    grid-column-end: 4;          /* Finaliza en la linea 4 */
+    transition: transform .2s;
+    
+}
+
+
+
+.item2 {
+   background-color: #f3f8ff;
+}
+
+.fotos {
+    transition: transform .2s ease;
+}
+
+.fotos img:hover{
+   
+    transform: scale(1.2);
+}
+
+
+
+.item2:hover{
+    background: #ffffe3;
+    box-shadow:  rgba(163,163,163,0.4);
+}
+
+
+
+
+
   div img {vertical-align: middle;
-    }
+
+}
   
   /* contenedor */
   .slideshow-container {
@@ -305,12 +356,14 @@ display: none;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .formulario__btn {
     height: 45px;
     line-height: 45px;
-    width: 30%;
+    width: 100%;
+    text-size-adjust: 100%;
     background: #000;
     color:#fff;
     font-weight: bold;
@@ -421,8 +474,10 @@ opacity: 1;
     padding:10px;
     text-align: center;             /* Contenido de los hijos centrado en x */
 }
-.item1 {
+.item3 {
    
     grid-column-start: 1;        /* Comienza en la linea 1 */
     grid-column-end: 4;          /* Finaliza en la linea 4 */
+   
+    
 }
