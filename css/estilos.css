@@ -34,22 +34,21 @@ body{
     margin-right: auto;
     padding: 1.5em;
 
-    grid-template: 150px 60px 1fr 1fr 100px  / auto auto ;
-
-    grid-template-areas: "header header"
-                         "seleccion seleccion"
-                         "general general"
-                         "fotos fotos"
-                         "pie pie";
-    gap: 0px;
+    grid-template: 150px 60px 1fr auto 100px  / auto auto ;
+    grid-template-areas: "header header "
+                          "seleccion seleccion "
+                          "general general "
+                          "fotos fotos "
+                          "pie pie ";
+  
 
 }
 
 .header         {grid-area: header; background-color: #ffdef2;}
 .seleccion      {grid-area: seleccion; background-color: #f2e2ff;}  
 .general        {grid-area: general; background-color: #e2eeff;} 
-.fotos          {grid-area: fotos; background-color: #e2eeff;}  
-.pie            {grid-area: pie; background-color: #ddfffc;}  
+.fotos        {grid-area: fotos; background-color:#e2eeff;}  
+.pie        {grid-area: pie; background-color:#ddfffc;}  
 
 
 /*----------------------------------------------------------------*/
@@ -124,10 +123,17 @@ body{
    
 }
 
+.grid-container a:link,
+.grid-container a:visited,
+.grid-container a:active
+{
+    color:#645197; 
+}
+
 
 .grid-item {
  
-    color:black;               
+    color:#645197;               
     padding:10px; 
     border-radius: 5px;
     text-align: center;     
@@ -149,6 +155,7 @@ body{
 
 .item2 {
    background-color: #f3f8ff;
+   
 }
 
 .fotos {
@@ -175,6 +182,26 @@ body{
 
 }
   
+.servicios {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.servicios h3,h4 {
+    color:  #645197;
+}
+
+.servicios h1 {
+    color:  #645197;
+    text-align: center;
+}
+
+
+
+
   /* contenedor */
   .slideshow-container {
     max-width: 800px;
