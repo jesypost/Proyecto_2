@@ -4,10 +4,6 @@
 }
 
 
-
-
-
-
 body{
     background: 	#ffdef2;
     padding: 0 1.5em;
@@ -16,43 +12,17 @@ body{
     
 }
 
-h1, h2{
-    border: 2px;
-    color: gray;
-    padding: 5px;
-   
-}
-
-
-
-
-/*h3 {
-    border: 2px;
-    color: 	#6565bf;
-    padding: 5px;
-   
-
-   
-
-
-}*/
-
-
-
-
-
-
 .parrafo1 {
+    text-align: justify;
     border: 2px;
-    color:gray;
-    padding: 5px;
+    color:blueviolet;
+    padding: 10px;
 }
-
-
 
 .parrafo2 {
+    text-align: justify;
     border: 2px;
-    
+    color: blue;
     padding: 20px;
 }
 
@@ -64,27 +34,52 @@ h1, h2{
     margin-right: auto;
     padding: 1.5em;
 
-    grid-template: 150px 60px 1fr 1fr 1fr  / auto auto ;
-    grid-template-areas: "header header "
-                          "seleccion seleccion "
-                          "general general "
-                          "fotos fotos "
-
-                          "pie pie ";
-    gap:0px;
-
+    grid-template: 150px 60px 1fr 1fr 100px  / auto auto ;
+    grid-template-areas: "header header"
+                         "seleccion seleccion"
+                         "general general"
+                         "fotos fotos"
+                         "pie pie";
+    gap: 0px;
 }
 
-.header         { grid-area: header; background-color: 	#ffdef2;}
-.seleccion      {grid-area: seleccion; background-color:#f2e2ff;}  
+.header         {grid-area: header; background-color: #ffdef2;}
+.seleccion      {grid-area: seleccion; background-color: #f2e2ff;}  
 .general        {grid-area: general; background-color: #e2eeff;} 
-
-.fotos        {grid-area: fotos; background-color:#e2eeff;}  
-.pie        {grid-area: pie; background-color:#ddfffc;}  
-
+.fotos          {grid-area: fotos; background-color: #e2eeff;}  
+.pie            {grid-area: pie; background-color: #ddfffc;}  
 
 
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas tipo tablet (menos de 920px)     */
+/*----------------------------------------------------------------*/
+@media only screen and (max-width: 920px) {
+    .container {
+        /* Uso un atajo para definir 5 filas / 2 columna */
+        grid-template: 150px auto auto auto auto / 30% auto;
 
+        /* Distribuimos el contenido en cada fila */
+        grid-template-areas:
+            "header header"
+            "seleccion seleccion"
+            "general general"
+            "fotos fotos "
+            "pie pie";
+    }
+}
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas tipo celular (menos de 600px)    */
+/*----------------------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+    .container {
+        /* Uso un atajo para definir 5 filas / 1 columna */
+        grid-template: 150px auto auto auto auto / 100%;
+
+        /* Distribuimos el contenido en cada fila */
+        grid-template-areas: "header" "seleccion" "general" "fotos" "pie";
+    }
+}
 
 .button {
     border: none;
@@ -104,6 +99,7 @@ h1, h2{
     text-decoration: none;
 }
 /*grid inicio.html*/
+
 .grid-container {
     display: grid;                        
     grid-template-columns: 1fr 1fr 1fr ;   
