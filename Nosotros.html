@@ -11,17 +11,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c0e17904ad.js" crossorigin="anonymous"></script>
-</head>
 
+    <style>
+        .p1 {  text-align: justify;
+        color:blueviolet;
+        padding: 10px;
+        }
+    h3 {    
+        color: #8c7fb1;
+        padding: 10px; 
+    }
+    h4 {
+        text-align: justify;
+        color: rgb(120, 120, 226);
+        padding: 10px; 
+    }
+    p::first-letter {
+        font-size: 130%;
+        color: #8A2BE2;
+
+    .img {
+        border-radius: 30px;
+    }
+    </style>
+
+</head>
 
 <body>
     <div class="container">
         <div class="header">
             <header>
-                <a href="index.html"><img src="img/Imagen3.png" alt="logo" width="140px" ></a>
+                <img src="img/Imagen3.png" alt="logo" width="140px" class="logo">
 </header>
         </div>
-
 
         <div class="seleccion">
 
@@ -34,27 +56,28 @@
 
     <div class="general">
 
-        <h3>Nuestra empresa</h3>
-     
-        <h4>Nos dedicamos a brindar soluciones integrales para eventos únicos y personalizados, pero ¿Querés sabes quienes somos?</h4>
+        <h3><i>Nuestra empresa</i></h3>
 
+        <h4>Nos dedicamos a brindar soluciones integrales para eventos únicos y personalizados, pero ¿querés sabes quienes somos?</h4>
 
-        <p class="parrafo1"> Nuestra empresa se inició hace más de una década con una visión clara: crear un espacio donde nuestros clientes puedan celebrar los momentos más importantes de sus vidas con la máxima comodidad y profesionalismo. Para lograr esto, construimos tres salones de fiesta en  nuestro complejo, cada uno diseñado para satisfacer las necesidades de eventos de diferentes tamaños.</p>
+        <p class="p1">Fiesta a Medida se inició hace más de una década con una visión clara: crear un espacio donde nuestros clientes puedan celebrar los momentos más importantes de sus vidas con máxima comodidad y profesionalismo. Para lograr esto, construimos tres salones de fiesta en  nuestro complejo, diseñados para satisfacer las necesidades de eventos de diferentes indoles.</p>
   
-        <p class="parrafo1"> Ofrecemos un salón de fiesta para 50 invitados, un segundo salón para hasta 100 invitados y nuestro gran salón para eventos de hasta 300 invitados.</p>
-        <p class="parrafo1">  </p>
-        Además de nuestros salones de fiesta, ofrecemos servicios de catering, animación y músicalización de eventos, todos ellos diseñados para brindar una experiencia completa a nuestros clientes. Nos aseguramos de que cada detalle sea atendido y personalizado para satisfacer las necesidades específicas de nuestros clientes, desde la selección de un menú delicioso hasta la elección de la música y la iluminación.
+        <p class="p1" > Ofrecemos un salón de fiesta para 50 invitados, un segundo salón para hasta 100 invitados y nuestro gran salón  de hasta 300 invitados.</p>
+        <p class="p1">  
+        Además ofrecemos servicios de catering, animación y músicalización de eventos, todos ellos diseñados para brindar una experiencia completa a nuestros clientes. 
         
-        Nuestro equipo de expertos en eventos está altamente capacitado y tiene experiencia en eventos de todo tipo. Trabajamos en estrecha colaboración con nuestros clientes para garantizar que cada detalle se ajuste a sus necesidades y preferencias. Desde bodas y graduaciones hasta fiestas corporativas y eventos privados, estamos comprometidos a hacer que cada evento sea inolvidable.
+        <p class="p1"> Nuestro equipo de expertos está altamente calificado y trabajamos en estrecha colaboración con nuestros clientes para garantizar que cada detalle se ajuste a sus necesidades y preferencias. Desde bodas y graduaciones hasta fiestas corporativas y eventos privados, estamos comprometidos a hacer que cada evento sea inolvidable.
+        </p>
         
-        A lo largo de los años, hemos desarrollado una reputación por ofrecer excelencia en cada aspecto de nuestros servicios. Nos enorgullece ser parte de algunos de los eventos más importantes de la vida de nuestros clientes, y es un honor para nosotros ser parte de estas celebraciones. Estamos comprometidos a seguir superando las expectativas de nuestros clientes y a ofrecer un servicio excepcional en cada evento.   
-
+        
+    </div>
+   
 <div class="fotos">
         <div class="container3">
-<h3>Estas personas nos recomiendan</h3>
-<h5>Hace click para conocerlas</h5>
-        <div id="app" class="container4">
-            <button v-on:click="traerDatosAPI"><a href="#tarjeta" id="enlace-sin-subrayado"> Ver</a></button>
+<h3 align="center">Estas personas nos recomiendan</h3>
+<h5 align="center">Hace click para conocerlas</h5>
+        <div id="app" class="container4" align="center">
+            <button v-on:click="traerDatosAPI" align="center"><a href="#tarjeta" id="enlace-sin-subrayado"> Ver</a></button>
             <p>({{registros}} registros leidos)</p>
             <!-- Aquí insertaremos contenido del archivo de texto1.txt -->
             <div v-html="HTML_a_mostrar" class="container2"></div>
